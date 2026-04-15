@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fathom Blue — The breath training platform for freedivers, spearfishers and surfers. Train anywhere. Go deeper. Come home safe." />
+  <meta property="og:title" content="Fathom Blue — Train Wild. Dive Free." />
+  <meta property="og:description" content="Structured CO₂ and O₂ training for ocean athletes." />
+  <meta property="og:type" content="website" />
+  <title>Fathom Blue — Train Wild. Dive Free.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo" aria-label="Fathom Blue Home">FATHOM BLUE</a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#waitlist">Waitlist</a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="#features" class="mobile-link">Features</a>
+    <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="#waitlist" class="mobile-link">Waitlist</a>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         SECTION 1 — HERO
+         ============================================================ -->
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="hero__bg"></div>
+      <div class="hero__waves"></div>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero__content">
+        <h1 class="hero__headline fade-in">
+          TRAIN WILD.<br>DIVE <span>FREE.</span>
+        </h1>
+        <p class="hero__sub fade-in">The breath training platform for ocean athletes</p>
+        <p class="hero__body fade-in">
+          Structured CO₂ and O₂ training for freedivers, spearfishers and surfers.
+          Train anywhere. Go deeper. Come home safe.
+        </p>
+
+        <div class="hero__ctas fade-in">
+          <a href="#waitlist" class="btn btn-primary" aria-label="Download on App Store">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on App Store
+          </a>
+          <a href="#waitlist" class="btn btn-primary" aria-label="Get it on Google Play">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.3.17.64.22.97.15l.08-.04 11.2-6.46-2.39-2.4-9.86 8.75zm-1.13-1.12l.01.01V1.36l.01-.01L13.9 12 2.05 22.64zM20.49 10.7l-2.55-1.47-2.7 2.7 2.7 2.7 2.58-1.49c.74-.43.74-1.52-.03-1.94zM4.15.43l-.06-.04a1.06 1.06 0 0 0-.97.15l9.86 8.75 2.39-2.4L4.15.43z"/></svg>
+            Get it on Google Play
+          </a>
+        </div>
+
+        <p class="hero__launch-note fade-in">Launching soon — join the waitlist below 🌊</p>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2 — WHO IT'S FOR
+         ============================================================ -->
+    <section class="who" id="who" aria-label="Who it's for">
+      <div class="container">
+        <p class="section-label fade-in">Who It's For</p>
+        <h2 class="section-title fade-in">Built for Ocean Athletes</h2>
+        <p class="section-subtitle fade-in">Whether you're pushing depth limits, hunting underwater, or charging big waves — Fathom Blue is built for you.</p>
+
+        <div class="who__grid">
+          <div class="who__card glass-card fade-in" style="transition-delay: 0.1s">
+            <div class="who__icon" aria-hidden="true">🤿</div>
+            <h3>Freedivers</h3>
+            <p>Push your depth limits with personalised CO₂ and O₂ training tables. Track your progress, improve your technique, and dive deeper — safely.</p>
+          </div>
+
+          <div class="who__card glass-card fade-in" style="transition-delay: 0.2s">
+            <div class="who__icon" aria-hidden="true">🎣</div>
+            <h3>Spearfishers</h3>
+            <p>Longer bottom time means more fish. Structured breath-hold training gives you the edge underwater, with spearfishing-specific techniques built in.</p>
+          </div>
+
+          <div class="who__card glass-card fade-in" style="transition-delay: 0.3s">
+            <div class="who__icon" aria-hidden="true">🌊</div>
+            <h3>Surfers</h3>
+            <p>Stay calm in hold-downs. Train your breath for big waves with high-stress recovery techniques used by the world's best big wave athletes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3 — FEATURES
+         ============================================================ -->
+    <section class="features" id="features" aria-label="Features">
+      <div class="container">
+        <p class="section-label fade-in">What's Inside</p>
+        <h2 class="section-title fade-in">Everything You Need to Train</h2>
+        <p class="section-subtitle fade-in">Six powerful tools, one elegant platform — designed to take you deeper.</p>
+
+        <div class="features__grid">
+
+          <div class="feature-card glass-card fade-in" style="transition-delay: 0.05s">
+            <div class="feature-card__icon" aria-hidden="true">🫁</div>
+            <div class="feature-card__title">CO₂ &amp; O₂ Tables</div>
+            <p>Personalised training tables that adapt to your maximum breath-hold time. Train smarter, not harder.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in" style="transition-delay: 0.1s">
+            <div class="feature-card__icon" aria-hidden="true">📈</div>
+            <div class="feature-card__title">Progress Tracking</div>
+            <p>Log every session. Track your personal bests. Watch your hold times grow with detailed stats and charts.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in" style="transition-delay: 0.15s">
+            <div class="feature-card__icon" aria-hidden="true">🐟</div>
+            <div class="feature-card__title">Spearfishing Techniques</div>
+            <p>Expert spearfishing tips and breath-hold techniques built directly into your training plan.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in" style="transition-delay: 0.2s">
+            <div class="feature-card__icon" aria-hidden="true">🛡️</div>
+            <div class="feature-card__title">Safety First</div>
+            <p>Buddy system reminders, shallow water blackout education, and safe training protocols in every session.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in" style="transition-delay: 0.25s">
+            <div class="feature-card__icon" aria-hidden="true">🌍</div>
+            <div class="feature-card__title">Multi-Language</div>
+            <p>Available in English, French and Spanish. Train in your language, wherever you are in the world.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in" style="transition-delay: 0.3s">
+            <div class="feature-card__icon" aria-hidden="true">⌚</div>
+            <div class="feature-card__title">Wearable Support</div>
+            <p>Apple Watch and Garmin integration. Track your training from your wrist, in or out of the water.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4 — APP SCREENSHOTS
+         ============================================================ -->
+    <section class="screenshots" id="screenshots" aria-label="App screenshots">
+      <div class="container">
+        <p class="section-label fade-in">The App</p>
+        <h2 class="section-title fade-in">See It In Action</h2>
+        <p class="section-subtitle fade-in">A clean, intuitive interface built for athletes who want to focus on training, not buttons.</p>
+      </div>
+
+      <div class="container">
+        <div class="screenshots__carousel fade-in" role="list" aria-label="App screenshot previews">
+
+          <div class="phone-mockup" role="listitem">
+            <div class="phone-mockup__notch" aria-hidden="true"></div>
+            <div class="phone-mockup__screen">
+              <div class="phone-mockup__icon" aria-hidden="true">⏱️</div>
+              <div class="phone-mockup__label">Training Timer</div>
+              <p class="phone-mockup__sub">Real-time breath-hold guidance with audio cues and vibration alerts</p>
+            </div>
+          </div>
+
+          <div class="phone-mockup" role="listitem">
+            <div class="phone-mockup__notch" aria-hidden="true"></div>
+            <div class="phone-mockup__screen">
+              <div class="phone-mockup__icon" aria-hidden="true">📊</div>
+              <div class="mock-bars" aria-hidden="true">
+                <div class="mock-bar" style="height:30%"></div>
+                <div class="mock-bar" style="height:50%"></div>
+                <div class="mock-bar" style="height:42%"></div>
+                <div class="mock-bar" style="height:65%"></div>
+                <div class="mock-bar" style="height:58%"></div>
+                <div class="mock-bar" style="height:80%"></div>
+                <div class="mock-bar" style="height:72%"></div>
+              </div>
+              <div class="phone-mockup__label">Progress Charts</div>
+              <p class="phone-mockup__sub">Visualise your improvement week by week</p>
+            </div>
+          </div>
+
+          <div class="phone-mockup" role="listitem">
+            <div class="phone-mockup__notch" aria-hidden="true"></div>
+            <div class="phone-mockup__screen">
+              <div class="phone-mockup__icon" aria-hidden="true">🫁</div>
+              <div class="phone-mockup__label">CO₂ Table</div>
+              <p class="phone-mockup__sub">Adaptive tables built around your personal max breath-hold time</p>
+            </div>
+          </div>
+
+          <div class="phone-mockup" role="listitem">
+            <div class="phone-mockup__notch" aria-hidden="true"></div>
+            <div class="phone-mockup__screen">
+              <div class="phone-mockup__icon" aria-hidden="true">🐟</div>
+              <div class="phone-mockup__label">Spearfishing Tips</div>
+              <p class="phone-mockup__sub">Expert technique library from world-class spearfishers</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5 — PRICING
+         ============================================================ -->
+    <section class="pricing" id="pricing" aria-label="Pricing">
+      <div class="container">
+        <p class="section-label fade-in">Pricing</p>
+        <h2 class="section-title fade-in">Start Free. Go Deeper.</h2>
+        <p class="section-subtitle fade-in" style="margin: 0 auto 64px;">No credit card required. Upgrade when you're ready to go all-in.</p>
+
+        <div class="pricing__grid">
+
+          <!-- Free -->
+          <div class="pricing-card glass-card fade-in" style="transition-delay: 0.1s">
+            <div class="pricing-card__header">
+              <div class="pricing-card__title">Free</div>
+              <div class="pricing-card__price">
+                <strong>$0</strong>
+                <span class="period">/ forever</span>
+              </div>
+            </div>
+            <ul class="pricing-card__features" aria-label="Free plan features">
+              <li>3 training sessions / week</li>
+              <li>Basic CO₂ and O₂ tables</li>
+              <li>Progress tracking</li>
+              <li>Ad-supported</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-outline">Start Free Today</a>
+          </div>
+
+          <!-- Premium -->
+          <div class="pricing-card glass-card pricing-card--premium fade-in" style="transition-delay: 0.2s">
+            <div class="pricing-card__header">
+              <span class="pricing-card__badge">Most Popular</span>
+              <div class="pricing-card__title">Premium</div>
+              <div class="pricing-card__price">
+                <strong>$12.99</strong>
+                <span class="period">/ month</span>
+                <br>
+                <span style="font-size:13px; margin-top: 4px; display:inline-block;">or <strong style="font-family:'DM Sans',sans-serif; font-size:15px; color:var(--cyan);">$69.99 / year</strong> — save 55%</span>
+              </div>
+            </div>
+            <ul class="pricing-card__features" aria-label="Premium plan features">
+              <li>Unlimited training sessions</li>
+              <li>Advanced table types</li>
+              <li>Spearfishing technique library</li>
+              <li>Wearable integration</li>
+              <li>No ads</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-primary">Start Free Today</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 6 — WAITLIST
+         ============================================================ -->
+    <section class="waitlist" id="waitlist" aria-label="Join the waitlist">
+      <div class="container">
+        <p class="section-label fade-in">Early Access</p>
+        <h2 class="section-title fade-in">Be First in the Water</h2>
+        <p class="section-subtitle fade-in">Join the Fathom Blue waitlist and get early access when we launch.</p>
+
+        <form class="waitlist__form fade-in" id="waitlistForm" novalidate aria-label="Waitlist signup form">
+          <label for="waitlistEmail" class="sr-only">Your email address</label>
+          <input
+            class="waitlist__input"
+            type="email"
+            id="waitlistEmail"
+            name="email"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+            aria-required="true"
+          />
+          <button type="submit" class="btn btn-primary">Join the Waitlist</button>
+        </form>
+
+        <div class="waitlist__success fade-in" id="waitlistSuccess" role="status" aria-live="polite">
+          You're on the list! We'll notify you at launch. Stay salty 🌊
+        </div>
+
+        <p class="waitlist__privacy fade-in">
+          No spam. Unsubscribe anytime. We respect your inbox like we respect the ocean.
+          <br><a href="privacy.html" style="color: var(--cyan);">Privacy Policy</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div>
+          <div class="footer__brand-logo">FATHOM BLUE</div>
+          <p class="footer__tagline">Train Wild. Dive Free.</p>
+          <p class="footer__desc">The breath training platform for ocean athletes.<br>Freediving · Spearfishing · Surfing</p>
+        </div>
+
+        <div>
+          <div class="footer__heading">Links</div>
+          <ul class="footer__links" role="list">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:hello@fathomblueco.com">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__heading">Follow Us</div>
+          <div class="footer__social" role="list" aria-label="Social media links">
+            <a href="#" role="listitem" aria-label="Instagram" title="Instagram">📸</a>
+            <a href="#" role="listitem" aria-label="TikTok" title="TikTok">🎵</a>
+            <a href="#" role="listitem" aria-label="Facebook" title="Facebook">📘</a>
+            <a href="#" role="listitem" aria-label="YouTube" title="YouTube">▶️</a>
+            <a href="#" role="listitem" aria-label="X (Twitter)" title="X">𝕏</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Fathom Blue. All rights reserved.</p>
+        <p class="footer__made">Built for ocean athletes, by ocean athletes 🌊</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Visually hidden utility -->
+  <style>.sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0; }</style>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

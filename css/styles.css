@@ -1020,3 +1020,17 @@ section {
 
   .phone-mockup { flex: 0 0 180px; height: 360px; }
 }
+
+/* Social links SVG icons */
+.social-links a {
+  color: #888888;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover {
+  color: #00C8D4;
+  transform: translateY(-3px);
+}

@@ -1,0 +1,34 @@
+I need to update the text on the Fathom Blue website. 
+Find the main website HTML/JS files for fathomblueco.com 
+(likely index.html and any associated JS or CSS files).
+
+Make the following exact text replacements:
+
+1. "The breath training platform for ocean athletes"
+   → "The breath training platform for ocean explorers"
+
+2. "Built for Ocean Athletes"
+   → "Built for Ocean Explorers"
+
+3. "A clean, intuitive interface built for athletes who want 
+   to focus on training, not buttons."
+   → "A clean, intuitive interface built for explorers who 
+   want to focus on training, not buttons."
+
+4. "The breath training platform for ocean athletes." (footer)
+   → "The breath training platform for ocean explorers."
+
+5. "Built for ocean athletes, by ocean athletes 🌊" (footer copyright)
+   → "Built for ocean explorers, by ocean explorers 🌊"
+
+6. "big wave athletes" (in the Surfers section)
+   → "big wave explorers"
+
+After making all changes, show me every line that was 
+modified with the before and after text so I can verify 
+each one before deploying.
+
+Do NOT change:
+- The tagline "Train Wild. Dive Free." 
+- Any URLs, file names, or metadata
+- Any third-party script references

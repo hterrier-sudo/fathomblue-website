@@ -4,7 +4,7 @@
 
 /* ---------- Supabase Config ---------- */
 const SUPABASE_URL = 'https://jndfzjbixgxytbufqsgd.supabase.co'
-const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY_HERE' // replace before deploy
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZGZ6amJpeGd4eXRidWZxc2dkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2NDA3MzgsImV4cCI6MjA5MTIxNjczOH0.e1WKymgmWVk9XFyENZSJbRuremyVipigHzkKo1HSme0'
 
 /* ---------- Waitlist Submit ---------- */
 async function submitWaitlist(email) {
@@ -12,7 +12,7 @@ async function submitWaitlist(email) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'apikey': eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZGZ6amJpeGd4eXRidWZxc2dkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2NDA3MzgsImV4cCI6MjA5MTIxNjczOH0.e1WKymgmWVk9XFyENZSJbRuremyVipigHzkKo1HSme0,
+      'apikey': SUPABASE_ANON_KEY,
       'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
     },
     body: JSON.stringify({ email, source: 'website' })

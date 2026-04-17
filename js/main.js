@@ -13,11 +13,40 @@ async function submitWaitlist(email) {
     headers: {
       'Content-Type': 'application/json',
       'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      'Prefer': 'return=minimal'
     },
     body: JSON.stringify({ email, source: 'website' })
   })
-  return res.ok
+
+  if (res.status === 409) {
+    return { success: false, duplicate: true }
+  }
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({}))
+    if (error.code === '23505' || (error.message && error.message.includes('duplicate'))) {
+      return { success: false, duplicate: true }
+    }
+    return { success: false, duplicate: false }
+  }
+
+  return { success: true }
+}
+
+/* ---------- Show inline form message ---------- */
+function showMessage(type, text) {
+  const colours = { success: '#00C8D4', duplicate: '#FF6B35', error: '#FF4444' }
+  let msg = document.getElementById('waitlistMessage')
+  if (!msg) {
+    msg = document.createElement('p')
+    msg.id = 'waitlistMessage'
+    msg.style.cssText = 'margin-top:12px; font-size:15px; font-weight:500; transition:color 0.2s;'
+    const form = document.getElementById('waitlistForm')
+    form.insertAdjacentElement('afterend', msg)
+  }
+  msg.style.color = colours[type] || colours.error
+  msg.textContent = text
 }
 
 /* ============================================================
@@ -134,18 +163,22 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true
 
       try {
-        const ok = await submitWaitlist(email)
-        if (ok) {
+        const result = await submitWaitlist(email)
+        if (result.success) {
           waitlistForm.style.display = 'none'
           waitlistSuccess.classList.add('show')
           waitlistSuccess.classList.add('visible')
+        } else if (result.duplicate) {
+          showMessage('duplicate', "You're already on the list! We'll see you at launch 🌊")
+          submitBtn.textContent = originalText
+          submitBtn.disabled = false
         } else {
-          alert('Something went wrong. Please try again or email hello@fathomblueco.com')
+          showMessage('error', 'Something went wrong. Please try again or email hello@fathomblueco.com')
           submitBtn.textContent = originalText
           submitBtn.disabled = false
         }
       } catch {
-        alert('Network error. Please check your connection and try again.')
+        showMessage('error', 'Network error. Please check your connection and try again.')
         submitBtn.textContent = originalText
         submitBtn.disabled = false
       }

@@ -133,3 +133,29 @@
 **Decision:** The `hub` CNAME record in Hostinger DNS (hub → cname.vercel-dns.com) must never be modified when making DNS changes for the marketing website.
 
 **Rationale:** hub.fathomblueco.com is a separate Vercel deployment serving the Fathom Blue Marketing Hub. Modifying this record would take the Marketing Hub offline. Logged after nearly conflicting with the Marketing Hub during website DNS setup.
+
+## 2026-05-08 — App feature alignment — website synced to app v0.20
+
+**Decision:** Website copy and features updated to reflect the app's actual v0.20 feature set. Three specific content changes made:
+
+1. "Spearfishing Techniques" feature card replaced with "4-Week Training Blocks" — block-based periodisation is a core product differentiator for all three audiences, not a spearfishing-only feature.
+2. "Multi-Language" feature card replaced with "Three Training Pillars" — multi-language is Phase 2 and not live. Three Pillars (Breathwork / Workout / Mobility) accurately describes the app's session architecture.
+3. New Training Pillars section added as a standalone section — gives the three-pillar model the prominence it deserves as the primary differentiator vs generic breath training apps.
+
+**Rationale:** The website was built before the app reached v0.20. Several feature descriptions were inaccurate or incomplete. Aligning website copy to the live app prevents visitor disappointment and improves App Store conversion.
+
+---
+
+## 2026-05-08 — Multi-language removed from website features
+
+**Decision:** "Multi-Language (English, French, Spanish)" is no longer listed as a feature on the website.
+
+**Rationale:** French and Spanish versions are Phase 2 — not built, not live, not committed to a timeline. Advertising a feature that doesn't exist is misleading. Removed from the Features section. May be reinstated when French/Spanish versions ship.
+
+---
+
+## 2026-05-08 — Safety Certification added to Free plan features
+
+**Decision:** "Safety Certification quiz" added to the Free plan feature list on the Pricing section.
+
+**Rationale:** The Safety Certification quiz is live in the app and available on the Free tier. It is a genuine differentiator — no other breath training app includes a built-in safety quiz. It was missing from the original pricing list and has been added.

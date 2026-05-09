@@ -4,7 +4,7 @@
 > This file covers the WEBSITE only (www.fathomblueco.com).
 > For the mobile app, see PROJECT_STATE.md in the app repo.
 
-Last updated: 2026-04-16
+Last updated: 2026-05-08
 Current status: **Live and deployed** — www.fathomblueco.com
 
 ---
@@ -53,13 +53,29 @@ Current status: **Live and deployed** — www.fathomblueco.com
 
 ### Sections — index.html
 - **Nav:** sticky, backdrop-blur on scroll, hamburger mobile menu
-- **Hero:** full viewport, CSS gradient, two CTA buttons (link to #waitlist), Coming Soon badge
-- **Who It's For:** Freedivers / Spearfishers / Surfers — 3 glass morphism cards
-- **Features:** 6 cards — CO₂ & O₂ Tables / Progress Tracking / Spearfishing Techniques / Safety First / Multi-Language / Wearable Support
+- **Hero:** full viewport, CSS gradient, two CTA buttons (link to #waitlist), Coming Soon badge — copy updated May 2026 to mention breathwork, strength, mobility and 4-week blocks
+- **Who It's For:** Freedivers / Spearfishers / Surfers — 3 glass morphism cards — copy updated May 2026
+- **Features:** 6 cards — CO₂ & O₂ Training Tables / Progress Tracking / 4-Week Training Blocks / Safety First — Always / Three Training Pillars / Wearable Support (Coming Soon)
+- **Training Pillars:** NEW section (May 2026) — 3 cards: Breathwork (cyan border) / Workout (orange border) / Mobility (grey border) — each with bullet list of features
 - **Screenshots:** 4 placeholder phone mockup cards in horizontal carousel
 - **Pricing:** Free + Premium cards — Premium has Most Popular badge (orange)
 - **Waitlist:** email form → Supabase insert
-- **Footer:** social SVG icons, links, copyright
+- **Footer:** social SVG icons, links, copyright — description updated May 2026
+
+### App Feature Alignment (May 2026 — v0.20 sync)
+- Hero subheadline updated: "The ocean explorer training platform"
+- Hero body copy updated: mentions breathwork, strength, mobility and 4-week blocks
+- Who It's For cards rewritten — all 3 audiences updated to reflect full app capability
+- Features section headline updated: "Everything in One App"
+- Feature Card 3 replaced: "Spearfishing Techniques" → "4-Week Training Blocks"
+- Feature Card 5 replaced: "Multi-Language" → "Three Training Pillars"
+- Feature Card 4 updated: "Safety First" → "Safety First — Always" with Safety Certification mention
+- NEW Training Pillars section added between Features and Screenshots — Breathwork / Workout / Mobility
+- Pricing Free plan updated: 6 bullets — adds "All three training pillars" and "Safety Certification quiz"
+- Pricing Premium plan updated: 7 bullets — adds "All three training pillars", "Advanced training blocks", "Wearable integration (coming soon)"
+- Footer description updated: "Breathwork · Workout · Mobility training for ocean explorers"
+- sitemap.xml lastmod updated to 2026-05-08
+- Confirmed zero "athlete/athletes" references in index.html
 
 ### Key Content Decisions (April 2026)
 - "Priority support" deliberately removed from Premium pricing
@@ -138,7 +154,9 @@ Current status: **Live and deployed** — www.fathomblueco.com
 
 ## Notes for Next Session
 
-- Verify Google Search Console shows pages indexed (48hrs after sitemap submission)
+- OG image is the highest priority outstanding task — create in Canva, upload to repo root
+- Verify Google Search Console shows index.html indexed (check periodically)
 - Check Make.com scenario is still ON and processing correctly
 - Spearfisher icon (images/spearfisher.svg) — confirm final version looks correct on live site
-- OG image is the highest priority outstanding task
+- Multi-language (French/Spanish) removed from features section — Phase 2 only, not live yet
+- "Spearfishing Techniques" feature card removed — content is embedded in training blocks, not a standalone feature

@@ -21,6 +21,19 @@
 
 ---
 
+## 📋 Required Reading — Start of Every Session
+
+Before starting any work on this project, read these files in order:
+
+1. **CLAUDE.md** (this file) — project overview, design system, config reference
+2. **Website_Working_Style.md** — how Claude Code works on this project
+3. **Website_Project_State.md** — current build status and pending tasks
+4. **Website_Decisions.md** — append-only decision log (check before making changes)
+
+**Note on WORKING_STYLE.md:** The Fathom Blue app project has a WORKING_STYLE.md that governs how Claude Code works on the mobile app. The website has its own adapted version: **Website_Working_Style.md**. All communication patterns and Hugues's preferences from the app's WORKING_STYLE.md apply here too. Website_Working_Style.md only overrides the parts that don't apply to a static website (no sub-agents, no TypeScript, no Expo, no formal brief files for simple tasks). When in doubt, read both.
+
+---
+
 ## 📁 File Structure
 
 ```
@@ -113,16 +126,27 @@ Buttons:         14px, bold, uppercase, DM Sans
 - Three cards: Freedivers | Spearfishers | Surfers
 - Spearfisher icon: `images/spearfisher.svg` with cyan filter
 - Glass morphism cards, cyan top border
+- Freedivers: mentions CO₂/O₂ tables, breathwork sequences, 4-week training blocks
+- Spearfishers: mentions breath-hold training, spearfishing techniques, ocean strength conditioning
+- Surfers: mentions breath training, mobility flows, strength conditioning
 
 ### Section 3 — Key Features
-- Headline: `Everything You Need to Train`
+- Headline: `Everything in One App`
 - 6 feature cards in 3×2 grid:
-  1. CO₂ & O₂ Tables
-  2. Progress Tracking
-  3. Spearfishing Techniques
-  4. Safety First
-  5. Multi-Language
+  1. CO₂ & O₂ Training Tables — 5 protocols + Box Breathing + dynamic apnea
+  2. Progress Tracking — session history, charts, training streak
+  3. 4-Week Training Blocks — beginner/intermediate/advanced periodisation arc
+  4. Safety First — Always — buddy reminders, blackout education, Safety Certification quiz
+  5. Three Training Pillars — Breathwork / Workout / Mobility
   6. Wearable Support — Apple Watch, Android Watch, Garmin, Oximeter — COMING SOON badge (orange)
+
+### Section 3.5 — Training Pillars (NEW — May 2026)
+- Headline: `Three Pillars. One Ocean Explorer.`
+- Subheadline: mentions breathwork, conditioning and mobility as the three pillars
+- Three cards with bullet lists:
+  - Breathwork (cyan top border): CO₂/O₂/Wonka/Mixed/Custom, Box Breathing, sequences, PB tracking
+  - Workout (orange top border): bodyweight + kettlebell, dive fitness, ocean strength, equipment-matched
+  - Mobility (grey top border): sport-specific flows, thoracic/shoulder/hip work, active recovery, deload flows
 
 ### Section 4 — App Screenshots
 - Headline: `See It In Action`
@@ -130,10 +154,10 @@ Buttons:         14px, bold, uppercase, DM Sans
 
 ### Section 5 — Pricing
 - Headline: `Start Free. Go Deeper.`
-- Free: $0/forever — 3 sessions/week, basic tables, progress tracking, ad-supported
-- Premium: $12.99/month or $69.99/year — unlimited sessions, advanced tables, spearfishing library, wearable integration, no ads
+- Free: $0/forever — 3 sessions/week, all three pillars, basic tables, progress tracking + PBs, Safety Certification, ad-supported
+- Premium: $12.99/month or $69.99/year — unlimited sessions, all three pillars, all 5 protocols + advanced tables, advanced blocks, spearfishing library, wearable integration (coming soon), no ads
 - "Most Popular" badge on Premium (orange `#FF6B35`)
-- NOTE: Priority support was deliberately removed from Premium features
+- NOTE: Priority support was deliberately removed from Premium features — do not reinstate
 
 ### Section 6 — Waitlist
 - Headline: `Be First in the Water`
@@ -144,7 +168,7 @@ Buttons:         14px, bold, uppercase, DM Sans
 
 ### Section 7 — Footer
 - Tagline: `Train Wild. Dive Free.`
-- Description: `The breath training platform for ocean explorers. Freediving · Spearfishing · Surfing`
+- Description: `Breathwork · Workout · Mobility training for ocean explorers. Freediving · Spearfishing · Surfing`
 - Links: Privacy Policy | Terms of Service | Contact
 - Social icons: SVG icons with cyan hover
 - Copyright: `© 2026 Fathom Blue. All rights reserved.`
@@ -420,7 +444,10 @@ Keep the dark overlay for text readability.
 8. **Duplicate email error code is 23505** — already handled in js/main.js with orange friendly message
 9. **Make.com scenario must stay ON** — it handles waitlist notification + auto-response emails
 10. **privacy.html and terms.html are noindex** — required for App Store submission, not meant for Google
+11. **Multi-language is NOT a live feature** — French and Spanish versions are Phase 2 only — do not advertise as available
+12. **Three Training Pillars section exists** at `#pillars` between Features and Screenshots — Breathwork (cyan), Workout (orange), Mobility (grey) — added May 2026
+13. **Feature card copy is now aligned to app v0.20** — "Spearfishing Techniques" and "Multi-Language" cards no longer exist. Do not reinstate them.
 
 ---
 
-*Fathom Blue CLAUDE.md v1.0 — Confidential — Hugues — April 2026*
+*Fathom Blue CLAUDE.md v2.0 — Confidential — Hugues — May 2026*

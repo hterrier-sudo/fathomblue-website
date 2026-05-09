@@ -3,7 +3,7 @@
 > Update when infrastructure or deployment config changes.
 > This file covers the WEBSITE only (www.fathomblueco.com).
 
-Last updated: 2026-04-16
+Last updated: 2026-05-08
 
 ---
 
@@ -158,6 +158,21 @@ Make.com Scenario: "Fathom Blue Waitlist"
   ├── Module 1: Notification → ht.fathomblueco@gmail.com
   └── Module 2: Auto-response → {{1.record.email}} via Hostinger SMTP
 ```
+
+---
+
+## index.html — Section Structure (current as of May 2026)
+
+| # | Section ID | Description |
+|---|-----------|-------------|
+| 1 | `#hero` | Full-viewport hero — headline, subheadline, two CTA buttons, Coming Soon badge |
+| 2 | `#who` | Who It's For — 3 audience cards: Freedivers, Spearfishers, Surfers |
+| 3 | `#features` | Features — 6 cards: CO₂ & O₂ Tables, Progress Tracking, 4-Week Blocks, Safety First, Three Pillars, Wearable Support |
+| 3.5 | `#pillars` | Training Pillars — NEW May 2026 — 3 cards: Breathwork (cyan), Workout (orange), Mobility (grey) |
+| 4 | `#screenshots` | App Screenshots — 4 placeholder phone mockup cards |
+| 5 | `#pricing` | Pricing — Free + Premium cards |
+| 6 | `#waitlist` | Waitlist — email capture form → Supabase |
+| 7 | footer | Footer — social icons, links, copyright |
 
 ---
 

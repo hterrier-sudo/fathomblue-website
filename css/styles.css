@@ -1117,3 +1117,62 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   UNSUBSCRIBE PAGE
+   ============================================================ */
+.unsubscribe {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 80px;
+  background: radial-gradient(ellipse at 50% 0%, #0D1F2D 0%, var(--bg) 70%);
+}
+
+.unsubscribe__card {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 3px solid var(--cyan);
+}
+
+.unsubscribe__title {
+  font-size: 48px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.unsubscribe__body {
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.unsubscribe__message {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.unsubscribe__message:empty {
+  display: none;
+}
+
+.unsubscribe__help {
+  margin-top: 28px;
+  font-size: 14px;
+}
+
+.unsubscribe__help a {
+  color: var(--cyan);
+}
+
+@media (max-width: 480px) {
+  .unsubscribe__card {
+    padding: 28px 20px;
+  }
+
+  .unsubscribe__title {
+    font-size: 40px;
+  }
+}

@@ -34,6 +34,26 @@ async function submitWaitlist(email) {
   return { success: true }
 }
 
+/* ---------- Waitlist Unsubscribe ---------- */
+// Returns true if a row was deleted, false if no row matched the token
+async function unsubscribeWaitlist(token) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/unsubscribe_waitlist`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+    },
+    body: JSON.stringify({ p_token: token })
+  })
+
+  if (!res.ok) {
+    throw new Error(`Unsubscribe failed with status ${res.status}`)
+  }
+
+  return (await res.json()) === true
+}
+
 /* ---------- Show inline form message ---------- */
 function showMessage(type, text) {
   const colours = { success: '#00C8D4', duplicate: '#FF6B35', error: '#FF4444' }
@@ -189,6 +209,47 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  /* ---------- 7. Unsubscribe page ---------- */
+  const unsubscribeBtn = document.getElementById('unsubscribeBtn')
+  const unsubscribeMessage = document.getElementById('unsubscribeMessage')
+
+  if (unsubscribeBtn) {
+    const colours = { success: '#00C8D4', warning: '#FF6B35', error: '#FF4444' }
+
+    const showUnsubscribeMessage = (type, text) => {
+      unsubscribeMessage.style.color = colours[type]
+      unsubscribeMessage.textContent = text
+    }
+
+    const token = new URLSearchParams(window.location.search).get('token') || ''
+
+    // Supabase is only called on click — email link scanners open links automatically
+    if (!isValidUuid(token)) {
+      unsubscribeBtn.style.display = 'none'
+      showUnsubscribeMessage('warning', "This unsubscribe link looks incomplete. Please use the link in your email, or contact hello@fathomblueco.com and we'll remove you manually.")
+    } else {
+      unsubscribeBtn.addEventListener('click', async () => {
+        const originalText = unsubscribeBtn.textContent
+        unsubscribeBtn.textContent = 'Unsubscribing…'
+        unsubscribeBtn.disabled = true
+
+        try {
+          const removed = await unsubscribeWaitlist(token)
+          unsubscribeBtn.style.display = 'none'
+          if (removed) {
+            showUnsubscribeMessage('success', "You've been unsubscribed. Sorry to see you go — the ocean's always here if you want to come back 🌊")
+          } else {
+            showUnsubscribeMessage('warning', "This email is already unsubscribed or the link has expired. If you're still receiving emails, contact hello@fathomblueco.com")
+          }
+        } catch {
+          showUnsubscribeMessage('error', 'Network error. Please check your connection and try again.')
+          unsubscribeBtn.textContent = originalText
+          unsubscribeBtn.disabled = false
+        }
+      })
+    }
+  }
+
 })
 
 /* ============================================================
@@ -196,6 +257,13 @@ document.addEventListener('DOMContentLoaded', () => {
    ============================================================ */
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
+/* ============================================================
+   Utility: UUID validation (unsubscribe tokens)
+   ============================================================ */
+function isValidUuid(value) {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value)
 }
 
 /* ============================================================

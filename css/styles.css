@@ -646,6 +646,12 @@ section {
   margin: 0 auto;
 }
 
+.pricing__grid--single {
+  grid-template-columns: 1fr;
+  max-width: 480px;
+  text-align: center;
+}
+
 .pricing-card {
   display: flex;
   flex-direction: column;

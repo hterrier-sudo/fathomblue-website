@@ -964,7 +964,14 @@ section {
   margin-bottom: 16px;
 }
 
-.inner-content ul li {
+.inner-content ol {
+  list-style: decimal;
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.inner-content ul li,
+.inner-content ol li {
   color: var(--grey);
   margin-bottom: 8px;
   line-height: 1.65;

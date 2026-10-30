@@ -9,7 +9,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/bebas-neue-latin-ext.woff2') format('woff2');
+  src: url('../fonts/bebas-neue-latin-ext-v1.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/bebas-neue-latin.woff2') format('woff2');
+  src: url('../fonts/bebas-neue-latin-v1.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: url('../fonts/dm-sans-latin-ext.woff2') format('woff2');
+  src: url('../fonts/dm-sans-latin-ext-v1.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -36,7 +36,51 @@
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: url('../fonts/dm-sans-latin.woff2') format('woff2');
+  src: url('../fonts/dm-sans-latin-v1.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Fallbacks shown until the fonts above load. Sized from measured metrics so
+   the swap moves text as little as possible. Bebas is condensed, so its
+   fallbacks match its width, not its height. Same range as the latin fonts,
+   so characters they lack (e.g. the 2 in CO2) still reach sans-serif. */
+@font-face {
+  font-family: 'Bebas Fallback Roboto';
+  src: local('Roboto'), local('Roboto-Regular');
+  size-adjust: 62.65%;
+  ascent-override: 143.66%;
+  descent-override: 47.89%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Bebas Fallback Arial';
+  src: local('Arial'), local('ArialMT'), local('Helvetica');
+  size-adjust: 57.59%;
+  ascent-override: 156.28%;
+  descent-override: 52.09%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'DM Sans Fallback Roboto';
+  src: local('Roboto'), local('Roboto-Regular');
+  size-adjust: 104.43%;
+  ascent-override: 94.99%;
+  descent-override: 29.68%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'DM Sans Fallback Arial';
+  src: local('Arial'), local('ArialMT'), local('Helvetica');
+  size-adjust: 104.41%;
+  ascent-override: 95.01%;
+  descent-override: 29.69%;
+  line-gap-override: 0%;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -48,6 +92,9 @@
   --orange:  #FF6B35;
   --white:   #FFFFFF;
   --grey:    #888888;
+
+  --font-heading: 'Bebas Neue', 'Bebas Fallback Roboto', 'Bebas Fallback Arial', sans-serif;
+  --font-body: 'DM Sans', 'DM Sans Fallback Roboto', 'DM Sans Fallback Arial', sans-serif;
 
   --transition: 0.3s ease;
   --radius: 12px;
@@ -69,7 +116,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--white);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -80,7 +127,7 @@ ul { list-style: none; }
 
 /* ---------- Typography ---------- */
 h1, h2, h3, h4 {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   text-transform: uppercase;
   line-height: 1.05;
   letter-spacing: 0.02em;
@@ -131,7 +178,7 @@ section {
   gap: 8px;
   padding: 14px 28px;
   border-radius: 8px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -228,7 +275,7 @@ section {
 }
 
 .nav__logo {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   font-size: 28px;
   color: var(--cyan);
   letter-spacing: 0.05em;
@@ -296,7 +343,8 @@ section {
 }
 
 .nav__mobile a {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
   font-size: 48px;
   color: var(--white);
   letter-spacing: 0.05em;
@@ -474,7 +522,7 @@ section {
 }
 
 .who__card h3 {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   font-size: 26px;
   text-transform: uppercase;
   color: var(--white);
@@ -515,7 +563,7 @@ section {
 }
 
 .feature-card__title {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   font-size: 22px;
   color: var(--cyan);
   margin-bottom: 10px;
@@ -599,7 +647,7 @@ section {
 }
 
 .phone-mockup__label {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   font-size: 18px;
   color: var(--cyan);
   text-align: center;
@@ -691,7 +739,7 @@ section {
 }
 
 .pricing-card__title {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   font-size: 32px;
   color: var(--white);
   text-transform: uppercase;
@@ -704,7 +752,7 @@ section {
 }
 
 .pricing-card__price strong {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   font-size: 48px;
   color: var(--white);
   letter-spacing: -0.02em;
@@ -773,7 +821,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   color: var(--white);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   outline: none;
   transition: border-color var(--transition), box-shadow var(--transition);
@@ -824,7 +872,7 @@ section {
 }
 
 .footer__brand-logo {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   font-size: 32px;
   color: var(--cyan);
   margin-bottom: 8px;
@@ -844,7 +892,7 @@ section {
 }
 
 .footer__heading {
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-heading);
   font-size: 18px;
   text-transform: uppercase;
   color: var(--white);
@@ -945,7 +993,7 @@ section {
 
 .inner-content h3 {
   font-size: 20px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   color: var(--white);
   margin: 28px 0 10px;
@@ -995,7 +1043,7 @@ section {
 
 .safety-warning h3 {
   color: var(--orange) !important;
-  font-family: 'Bebas Neue', cursive !important;
+  font-family: var(--font-heading) !important;
   font-size: 22px !important;
   text-transform: uppercase !important;
   margin-bottom: 12px !important;
@@ -1130,7 +1178,7 @@ section {
 }
 
 .pillar-card h3 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.8rem;
   color: var(--white);
   margin-bottom: 12px;
